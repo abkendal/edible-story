@@ -1,0 +1,23 @@
+{
+  "name": "francislanglois.github.io",
+  "version": "1.0.0",
+  "description": "Accessibility Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://abkendal@bitbucket.org/abkendal/ttc-thisiswhere.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://abkendal@bitbucket.org/abkendal/ttc-thisiswhere.git"
+  },
+  "homepage": "https://abkendal@bitbucket.org/abkendal/ttc-thisiswhere.git",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}

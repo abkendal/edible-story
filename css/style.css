@@ -1,0 +1,54 @@
+html, body {
+  height: 100%; }
+
+.container {
+  width: 100%;
+  height: 100vh; }
+
+.table {
+  margin: auto;
+  width: 1000px;
+  height: 700px; }
+
+.panel {
+  position: relative;
+  z-index: 2;
+  width: 24.5%;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  transition: all 2s; }
+  .panel:hover {
+    width: 100%; }
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  transition: all .5s; }
+
+.panel-1 .inner {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/panel1.jpg);
+  transform: scale(2); }
+
+.panel-2 .inner {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/panel1.jpg);
+  transform: scale(2); }
+
+.panel-3 .inner {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/panel1.jpg);
+  transform: scale(2); }
+
+.panel-4 .inner {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/panel1.jpg);
+  transform: scale(2); }
