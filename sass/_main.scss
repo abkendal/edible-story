@@ -100,9 +100,9 @@ html,body {
 .panel-4{
 	left: 75%;
 	.inner {
-		background-position: center;
-	  	background-size: cover;
-	  	background-image: url(../img/panel1-1.jpg);
-		  	// transform: scale(2);
+		background-position-x: -4003px;
+		background-position-y: -836px;
+		background-size: 5300px;
+	  	background-image: url(../img/panel4.jpg);
 	}
 }

@@ -76,6 +76,7 @@ html, body {
 .panel-4 {
   left: 75%; }
   .panel-4 .inner {
-    background-position: center;
-    background-size: cover;
-    background-image: url(../img/panel1-1.jpg); }
+    background-position-x: -4003px;
+    background-position-y: -836px;
+    background-size: 5300px;
+    background-image: url(../img/panel4.jpg); }
