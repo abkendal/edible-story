@@ -40,7 +40,9 @@ html, body {
     background-size: 3500px;
     background-image: url(../img/panel1-1.jpg); }
   .panel-1.active .inner {
-    background-position-x: -1163px; }
+    background-position-x: -1100px;
+    background-position-y: -158px;
+    background-size: 2900px; }
   .panel-1.active.load .inner {
     background-position-x: -10px;
     background-position-y: 15px;
@@ -80,3 +82,11 @@ html, body {
     background-position-y: -836px;
     background-size: 5300px;
     background-image: url(../img/panel4.jpg); }
+  .panel-4.active .inner {
+    background-position-x: -3573px;
+    background-position-y: -930px;
+    background-size: 5600px; }
+  .panel-4.load .inner {
+    background-position-x: -100px;
+    background-position-y: 0;
+    background-size: 1000px; }

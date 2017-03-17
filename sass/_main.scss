@@ -46,7 +46,9 @@ html,body {
 	}
 	&.active {
 		.inner {
-	    	background-position-x: -1163px; 
+	    	background-position-x: -1100px; 
+	    	background-position-y: -158px;
+	    	background-size: 2900px;
 		}
 		&.load {
 			.inner {
@@ -104,5 +106,19 @@ html,body {
 		background-position-y: -836px;
 		background-size: 5300px;
 	  	background-image: url(../img/panel4.jpg);
+	}
+	&.active {
+		.inner {
+			background-position-x: -3573px;
+			background-position-y: -930px;
+			background-size: 5600px;
+		}
+	}
+	&.load {
+		.inner {
+			background-position-x: -100px;
+			background-position-y: 0;
+			background-size: 1000px;
+		}
 	}
 }
