@@ -82,9 +82,18 @@ html,body {
 		background-position-x: -900px;
 		background-position-y: -335px;
 	}
+	video {
+		opacity: 0;
+		transition: all 3s ease;
+	}
 	&.active {
 		.inner {
 			background-position-x: -468px;
+		}
+	}
+	&.load {
+		video {
+			opacity: 1;
 		}
 	}
 }
