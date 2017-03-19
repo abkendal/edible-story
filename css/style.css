@@ -18,10 +18,15 @@ html, body {
   height: 600px;
   overflow: hidden;
   transition: all 2s; }
+  .panel:hover {
+    transition: transform 1s;
+    transform: scale(1.03); }
   .panel.active {
     width: 100%;
     z-index: 3;
     left: 0; }
+    .panel.active .inner {
+      z-index: 3; }
 
 .inner {
   position: relative;
@@ -30,14 +35,15 @@ html, body {
   width: 100%;
   background-color: white;
   transition: all 3s;
+  transition: z-index 0;
   background-repeat: no-repeat; }
 
 .panel-1 {
   left: 0; }
   .panel-1 .inner {
-    background-position-x: -1434px;
-    background-position-y: -242px;
-    background-size: 3500px;
+    background-position-x: -1576px;
+    background-position-y: -308px;
+    background-size: 3800px;
     background-image: url(../img/panel1-1.jpg); }
   .panel-1.active .inner {
     background-position-x: -1100px;
@@ -51,9 +57,9 @@ html, body {
 .panel-2 {
   left: 25%; }
   .panel-2 .inner {
-    background-position-x: -275px;
-    background-position-y: -125px;
-    background-size: 1176px;
+    background-position-x: -319px;
+    background-position-y: -224px;
+    background-size: 1363px;
     background-image: url(../img/panel2.jpg); }
   .panel-2.active .inner {
     background-position-x: 0px;
@@ -63,24 +69,25 @@ html, body {
 .panel-3 {
   left: 50%; }
   .panel-3 .inner {
-    background-size: 1775px;
+    background-size: 2007px;
     background-image: url(../img/panel3.jpg);
-    background-position-x: -900px;
-    background-position-y: -335px; }
+    background-position-x: -982px;
+    background-position-y: -447px; }
   .panel-3 video {
     opacity: 0;
     transition: all 3s ease; }
   .panel-3.active .inner {
-    background-position-x: -468px; }
+    background-position-x: -558px;
+    background-size: 1965px; }
   .panel-3.load video {
     opacity: 1; }
 
 .panel-4 {
   left: 75%; }
   .panel-4 .inner {
-    background-position-x: -4003px;
-    background-position-y: -836px;
-    background-size: 5300px;
+    background-position-x: -4335px;
+    background-position-y: -975px;
+    background-size: 5825px;
     background-image: url(../img/panel4.jpg); }
   .panel-4.active .inner {
     background-position-x: -3573px;

@@ -18,10 +18,18 @@ html,body {
   	height: $height;
 	overflow: hidden;
 	transition: all 2s;
+	&:hover {
+		transition: transform 1s;
+		transform: scale(1.03);
+		// outline: -webkit-focus-ring-color auto 5px;
+	}
 	&.active{
 		width: 100%;
 		z-index: 3;
 		left: 0;
+		.inner {
+			z-index: 3;
+		}
 	}
 }
 .inner {
@@ -32,6 +40,7 @@ html,body {
 	width: 100%;
 	background-color: white;
 	transition: all 3s;
+	transition: z-index 0;
 
 	background-repeat: no-repeat;
 }
@@ -39,9 +48,10 @@ html,body {
 	left: 0;
 
 	.inner {
-		background-position-x: -1434px;
-		    background-position-y: -242px;
-		    background-size: 3500px;
+
+		background-position-x: -1576px;
+		    background-position-y: -308px;
+		    background-size: 3800px;
 	    background-image: url(../img/panel1-1.jpg);
 	}
 	&.active {
@@ -63,9 +73,9 @@ html,body {
 .panel-2{
 	left: 25%;
 	.inner {
-		background-position-x: -275px;
-		background-position-y: -125px;
-		background-size: 1176px;
+		background-position-x: -319px;
+		background-position-y: -224px;
+		background-size: 1363px;
 	  	background-image: url(../img/panel2.jpg);
 	}
 	&.active {
@@ -79,10 +89,10 @@ html,body {
 .panel-3{
 	left: 50%;
 	.inner {
-		background-size: 1775px;
-		background-image: url(../img/panel3.jpg);
-		background-position-x: -900px;
-		background-position-y: -335px;
+		background-size: 2007px;
+		    background-image: url(../img/panel3.jpg);
+		    background-position-x: -982px;
+		    background-position-y: -447px;
 	}
 	video {
 		opacity: 0;
@@ -90,7 +100,8 @@ html,body {
 	}
 	&.active {
 		.inner {
-			background-position-x: -468px;
+			background-position-x: -558px;
+			background-size: 1965px;
 		}
 	}
 	&.load {
@@ -102,9 +113,10 @@ html,body {
 .panel-4{
 	left: 75%;
 	.inner {
-		background-position-x: -4003px;
-		background-position-y: -836px;
-		background-size: 5300px;
+		background-position-x: -4335px;
+		background-position-y: -975px;
+		background-size: 5825px;
+
 	  	background-image: url(../img/panel4.jpg);
 	}
 	&.active {
