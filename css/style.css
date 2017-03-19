@@ -22,7 +22,7 @@ html, body {
   display: inline-block;
   height: 600px;
   overflow: hidden;
-  transition: all 2s; }
+  transition: all 3s; }
   .panel.active {
     width: 100%;
     z-index: 3;
