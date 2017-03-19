@@ -1,5 +1,6 @@
 html, body {
-  height: 100%; }
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.25); }
 
 .container {
   width: 100%; }
@@ -8,7 +9,11 @@ html, body {
   margin: auto;
   width: 798px;
   height: 600px;
-  position: relative; }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -399px;
+  margin-top: -300px; }
 
 .panel {
   position: absolute;
