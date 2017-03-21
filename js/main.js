@@ -3,7 +3,8 @@ $( document ).ready(function() {
 
     
 	$('.panel').click(function(){
-		
+		$('.panel').css('z-index', '5');
+		$(this).css('z-index', '6');
 		// 2 step panel animations
 		if ($(this).hasClass('2step')){
 			if ($(this).hasClass('active')){

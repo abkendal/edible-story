@@ -21,7 +21,9 @@ html, body {
   display: inline-block;
   height: 600px;
   overflow: hidden;
-  transition: all 3s; }
+  transition-property: width, left;
+  transition-duration: 3s, 3s;
+  z-index: 5; }
   .panel.active {
     width: 100%;
     z-index: 5;
@@ -29,7 +31,7 @@ html, body {
 
 .inner {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -37,8 +39,7 @@ html, body {
   background-repeat: no-repeat; }
 
 .panel-1 {
-  left: 0;
-  z-index: 4; }
+  left: 0; }
   .panel-1 .inner {
     background-position-x: -1576px;
     background-position-y: -308px;
@@ -54,7 +55,6 @@ html, body {
     background-size: 818px; }
 
 .panel-2 {
-  z-index: 3;
   left: 25%; }
   .panel-2 .inner {
     background-position-x: -319px;
@@ -67,7 +67,6 @@ html, body {
     background-size: 800px; }
 
 .panel-3 {
-  z-index: 2;
   left: 50%; }
   .panel-3 .inner {
     background-size: 2007px;
@@ -84,7 +83,6 @@ html, body {
     opacity: 1; }
 
 .panel-4 {
-  z-index: 1;
   left: 75%; }
   .panel-4 .inner {
     background-position-x: -4335px;
