@@ -27,7 +27,7 @@ $( document ).ready(function() {
 				});
 			}
 			else {
-				$(this).addClass('active').delay(3000).queue(function(){
+				$(this).addClass('active').delay(2000).queue(function(){
 				    $(this).addClass('load').dequeue();
 				    // $('.inner').css('background-image', 'none');
 				    vid.play();
