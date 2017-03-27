@@ -23,7 +23,8 @@ html,body {
 	overflow: hidden;
 
 	transition-property: width, left;
-	transition-duration: 3s, 3s;
+	transition-duration: 1.5s, 1.5s;
+	transition-timing-function: ease, ease;
 	z-index: 5;
 	&:hover {
 		// transition: transform 1s;
@@ -41,17 +42,17 @@ html,body {
 	z-index: 5;
 	height: 100%;
 	width: 100%;
-	background-color: white;
-	transition: all 3s;
+	background-color: white; 
+	transition: all 1.5s ease;
 	background-repeat: no-repeat;
 }
 .panel-1{
 	left: 0;
 	.inner {
-		background-position-x: -1576px;
-		background-position-y: -308px;
-		background-size: 3800px;
-	    background-image: url(../img/panel1-1.jpg);
+		background-position-x: -1726px;
+		    background-position-y: -369px;
+		    background-size: 4000px;
+	    background-image: url(../img/panel-1.svg);
 	}
 	&.active {
 		.inner {
@@ -61,9 +62,10 @@ html,body {
 		}
 		&.load {
 			.inner {
-				background-position-x: -10px;
-			    background-position-y: 15px;
-			    background-size: 818px;
+				transition: all 2.5s ease;
+				background-position-x: -60px;
+				background-position-y: 9px;
+				background-size: 900px;
 			}
 		}
 	}

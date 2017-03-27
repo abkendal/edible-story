@@ -22,7 +22,8 @@ html, body {
   height: 600px;
   overflow: hidden;
   transition-property: width, left;
-  transition-duration: 3s, 3s;
+  transition-duration: 1.5s, 1.5s;
+  transition-timing-function: ease, ease;
   z-index: 5; }
   .panel.active {
     width: 100%;
@@ -35,24 +36,25 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: white;
-  transition: all 3s;
+  transition: all 1.5s ease;
   background-repeat: no-repeat; }
 
 .panel-1 {
   left: 0; }
   .panel-1 .inner {
-    background-position-x: -1576px;
-    background-position-y: -308px;
-    background-size: 3800px;
-    background-image: url(../img/panel1-1.jpg); }
+    background-position-x: -1726px;
+    background-position-y: -369px;
+    background-size: 4000px;
+    background-image: url(../img/panel-1.svg); }
   .panel-1.active .inner {
     background-position-x: -1100px;
     background-position-y: -158px;
     background-size: 2900px; }
   .panel-1.active.load .inner {
-    background-position-x: -10px;
-    background-position-y: 15px;
-    background-size: 818px; }
+    transition: all 2.5s ease;
+    background-position-x: -60px;
+    background-position-y: 9px;
+    background-size: 900px; }
 
 .panel-2 {
   left: 25%; }

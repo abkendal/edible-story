@@ -9,12 +9,12 @@ $( document ).ready(function() {
 		// 2 step panel animations
 		if ($(this).hasClass('2step')){
 			if ($(this).hasClass('active')){
-				$(this).removeClass('load').delay(2500).queue(function(){
+				$(this).removeClass('load').delay(1500).queue(function(){
 				    $(this).removeClass('active').dequeue();
 				});
 			}
 			else {
-				$(this).addClass('active').delay(4000).queue(function(){
+				$(this).addClass('active').delay(2000).queue(function(){
 				    $(this).addClass('load').dequeue();
 				});
 			}
