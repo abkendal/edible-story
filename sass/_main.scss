@@ -100,6 +100,8 @@ html,body {
 	}
 	&.active {
 		.inner {
+			// background: white;
+			transition: all 1.5s ease;
 			background-position-x: -558px;
 			background-size: 1965px;
 		}
@@ -109,7 +111,9 @@ html,body {
 			// background-image: none;
 		}
 		video {
+			// transition: background-color 1000ms linear;
 			opacity: 1;
+			background-color: white;
 		}
 	}
 }

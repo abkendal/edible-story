@@ -79,10 +79,12 @@ html, body {
     opacity: 0;
     transition: all 3s ease; }
   .panel-3.active .inner {
+    transition: all 1.5s ease;
     background-position-x: -558px;
     background-size: 1965px; }
   .panel-3.load video {
-    opacity: 1; }
+    opacity: 1;
+    background-color: white; }
 
 .panel-4 {
   left: 75%; }
