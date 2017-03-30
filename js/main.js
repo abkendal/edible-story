@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 	var vid = document.getElementById("video"); 
 
-    
 
     // Panel animations
 	$('.panel').click(function(){
@@ -22,6 +21,7 @@ $( document ).ready(function() {
 			}
 		}
 
+		// Panel 3 animations
 		else if($(this).hasClass('panel-3')){
 			if ($(this).hasClass('active')){
 				$('.fa').click(function(){
@@ -45,7 +45,9 @@ $( document ).ready(function() {
 		}
 	});
 
+	// Skip first 4 seconds
 	vid.currentTime=4;
+
 	// Button function
 	$('#play').click(function () {
 	   if ($("#video").get(0).paused) {
@@ -57,41 +59,51 @@ $( document ).ready(function() {
 	  }
 	});
 
+	// Play/Pause
 	$('#video').on('ended',function(){
 		vid.currentTime=4;
 		$("#video").get(0).pause();
 	    $("#play").html("Play");
 	   });
 
+	// Return to beginning
 	$("#beginning").click(function(){
 		vid.currentTime=4;
 		$("#video").get(0).pause();
 	})
 
+	// Expand/Collapse
 	$('#expand').click(function(){
+
+		// Collapse
 		if ($(this).hasClass('active')){
-			$(this).prop("disabled",true);
 			vid.currentTime=10;
+			$(this).prop("disabled",true);
 			$("#video").get(0).play();
+
 			$(this).html("Expand");
+			$(this).removeClass('active');
+
 			setTimeout(function(){ 
 				$("#video").get(0).pause();
 				$("#play").html("Play");
 				$("#expand").prop("disabled",false);
 			 }, 1000);
-			$(this).removeClass('active');
 		}
+
+		// Expand
 		else {
 			vid.currentTime=5;
 			$("#video").get(0).play();
 			$(this).html("Collapse");
 			$(this).prop("disabled",true);
+			$(this).addClass('active');
+
 			setTimeout(function(){ 
 				$("#video").get(0).pause();
 				$("#play").html("Play");
 				$("#expand").prop("disabled",false);
 			 }, 1500);
-			$(this).addClass('active');
 		}
 		
 	});
