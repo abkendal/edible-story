@@ -21,6 +21,7 @@ html,body {
   	display: inline-block;
   	height: $height;
 	overflow: hidden;
+	border: 0;
 
 	transition-property: width, left;
 	transition-duration: 1.5s, 1.5s;
@@ -90,13 +91,36 @@ html,body {
 	left: 50%;
 	.inner {
 		background-size: 2007px;
-		    background-image: url(../img/panel3.jpg);
-		    background-position-x: -982px;
-		    background-position-y: -447px;
+		background-image: url(../img/panel3.jpg);
+		background-position-x: -982px;
+		background-position-y: -447px;
+		.fa {
+			display: none;
+		}
+
 	}
 	video {
 		opacity: 0;
 		transition: all 3s ease;
+	}
+	.btn-container {
+		width: 100%;
+		position: absolute;
+		bottom: 30px;
+		display: none;
+		text-align: center;
+	}
+	.btn-group {
+		width: 400px;
+		margin: auto;
+	}
+	.btn-inner {
+		display: inline-block;
+		width: 33%;
+		text-align: center;
+	}
+	.btn {
+		width: 100px;
 	}
 	&.active {
 		.inner {
@@ -114,6 +138,27 @@ html,body {
 			// transition: background-color 1000ms linear;
 			opacity: 1;
 			background-color: white;
+		}
+		.fa {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 26px;
+			cursor: pointer;
+			z-index: 100;
+			padding: 15px;
+			color: rgba(0, 0, 0, 0.14);
+			&:hover {
+				color: black;
+			}
+		}
+		&:hover {
+			.fa {
+				display: inline;
+			}
+			.btn-container {
+				display: block;
+			}
 		}
 	}
 }

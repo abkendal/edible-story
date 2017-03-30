@@ -21,6 +21,7 @@ html, body {
   display: inline-block;
   height: 600px;
   overflow: hidden;
+  border: 0;
   transition-property: width, left;
   transition-duration: 1.5s, 1.5s;
   transition-timing-function: ease, ease;
@@ -75,9 +76,26 @@ html, body {
     background-image: url(../img/panel3.jpg);
     background-position-x: -982px;
     background-position-y: -447px; }
+    .panel-3 .inner .fa {
+      display: none; }
   .panel-3 video {
     opacity: 0;
     transition: all 3s ease; }
+  .panel-3 .btn-container {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    display: none;
+    text-align: center; }
+  .panel-3 .btn-group {
+    width: 400px;
+    margin: auto; }
+  .panel-3 .btn-inner {
+    display: inline-block;
+    width: 33%;
+    text-align: center; }
+  .panel-3 .btn {
+    width: 100px; }
   .panel-3.active .inner {
     transition: all 1.5s ease;
     background-position-x: -558px;
@@ -85,6 +103,21 @@ html, body {
   .panel-3.load video {
     opacity: 1;
     background-color: white; }
+  .panel-3.load .fa {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 100;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.14); }
+    .panel-3.load .fa:hover {
+      color: black; }
+  .panel-3.load:hover .fa {
+    display: inline; }
+  .panel-3.load:hover .btn-container {
+    display: block; }
 
 .panel-4 {
   left: 75%; }
