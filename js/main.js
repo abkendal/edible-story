@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 	var vid = document.getElementById("video"); 
 
-
     // Panel animations
 	$('.panel').click(function(){
 		$('.panel').css('z-index', '5');
