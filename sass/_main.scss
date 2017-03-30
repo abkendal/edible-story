@@ -1,6 +1,6 @@
 html,body {
     height:100%;
-        background-color: rgba(128, 128, 128, 0.25);
+        // background-color: rgba(128, 128, 128, 0.25);
 }
 .container {
 	width: 100%;
@@ -22,6 +22,7 @@ html,body {
   	height: $height;
 	overflow: hidden;
 	border: 0;
+	cursor: pointer;
 
 	transition-property: width, left;
 	transition-duration: 1.5s, 1.5s;
@@ -102,6 +103,7 @@ html,body {
 	video {
 		opacity: 0;
 		transition: all 3s ease;
+		cursor: pointer;
 	}
 	.btn-container {
 		width: 100%;
@@ -138,6 +140,7 @@ html,body {
 			// transition: background-color 1000ms linear;
 			opacity: 1;
 			background-color: white;
+			cursor: default;
 		}
 		.fa {
 			position: absolute;
