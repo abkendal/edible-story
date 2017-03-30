@@ -45,7 +45,7 @@ $( document ).ready(function() {
 		}
 	});
 
-
+	vid.currentTime=4;
 	// Button function
 	$('#play').click(function () {
 	   if ($("#video").get(0).paused) {
@@ -58,13 +58,13 @@ $( document ).ready(function() {
 	});
 
 	$('#video').on('ended',function(){
-		vid.currentTime=0;
+		vid.currentTime=4;
 		$("#video").get(0).pause();
 	    $("#play").html("Play");
 	   });
 
 	$("#beginning").click(function(){
-		vid.currentTime=2;
+		vid.currentTime=4;
 		$("#video").get(0).pause();
 	})
 
