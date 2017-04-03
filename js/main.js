@@ -26,7 +26,7 @@ var setPanels = function(){
 	panel1activeSize = 4.833*height;
 	
 	panel1loadX = -0.1*height;
-	panel1loadY = -0.015*height;
+	panel1loadY = 0.02*height;
 	panel1loadSize = 1.5*height;
 
 	// Panel 2
@@ -47,13 +47,13 @@ var setPanels = function(){
 	panel3activeSize = 3.275*height;
 
 	// Panel 4 
-	panel4startX = -7.225*height;
-	panel4startY = -1.625*height;
-	panel4startSize = 9.7083*height;
+	panel4startX = -6.5951*height;
+	panel4startY = -1.5642*height;
+	panel4startSize = 9.8575*height;
 
-	panel4activeX = -5.955*height;
-	panel4activeY = -1.55*height;
-	panel4activeSize = 9.333*height;
+	panel4activeX = -5.4125*height;
+	panel4activeY = -1.5009*height;
+	panel4activeSize = 9.5764*height;
 
 	panel4loadX = -0.1667*height;
 	panel4loadY = 0*height;
