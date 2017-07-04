@@ -44,7 +44,7 @@ html,body {
 		// outline: -webkit-focus-ring-color auto 5px;
 	}
 	&.active{
-		width: 100%;
+		width: 101%;
 		z-index: 5;
 		left: 0;
 	}
@@ -61,6 +61,7 @@ html,body {
 	left: 0;
 	.inner {
 	    background-image: url(../img/panel-1.svg);
+	    border-right: 2px solid #dedddd;
 	}
 	&.active {
 		.inner {
@@ -76,6 +77,7 @@ html,body {
 	left: 25%;
 	.inner {
 	  	background-image: url(../img/panel2.jpg);
+	  	border-right: 2px solid #dedddd;
 	}
 	&.active {
 		.inner {
@@ -86,6 +88,7 @@ html,body {
 	left: 50%;
 	.inner {
 		background-image: url(../img/panel3.jpg);
+		border-right: 2px solid #dedddd;
 		.fa {
 			display: none;
 		}
@@ -102,6 +105,7 @@ html,body {
 		bottom: 30px;
 		display: none;
 		text-align: right;
+		right: 15px;
 	}
 	.btn-group {
 		width: 400px;

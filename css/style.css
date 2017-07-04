@@ -33,7 +33,7 @@ html, body {
   transition-timing-function: ease, ease;
   z-index: 5; }
   .panel.active {
-    width: 100%;
+    width: 101%;
     z-index: 5;
     left: 0; }
 
@@ -48,19 +48,22 @@ html, body {
 .panel-1 {
   left: 0; }
   .panel-1 .inner {
-    background-image: url(../img/panel-1.svg); }
+    background-image: url(../img/panel-1.svg);
+    border-right: 2px solid #dedddd; }
   .panel-1.active.load .inner {
     transition: all 2.5s ease; }
 
 .panel-2 {
   left: 25%; }
   .panel-2 .inner {
-    background-image: url(../img/panel2.jpg); }
+    background-image: url(../img/panel2.jpg);
+    border-right: 2px solid #dedddd; }
 
 .panel-3 {
   left: 50%; }
   .panel-3 .inner {
-    background-image: url(../img/panel3.jpg); }
+    background-image: url(../img/panel3.jpg);
+    border-right: 2px solid #dedddd; }
     .panel-3 .inner .fa {
       display: none; }
   .panel-3 video {
@@ -72,7 +75,8 @@ html, body {
     position: absolute;
     bottom: 30px;
     display: none;
-    text-align: right; }
+    text-align: right;
+    right: 15px; }
   .panel-3 .btn-group {
     width: 400px;
     margin: auto; }

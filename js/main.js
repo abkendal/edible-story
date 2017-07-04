@@ -39,8 +39,9 @@ var setPanels = function(){
 	panel3startY = -0.872*height;
 	panel3startSize = 3.678*height;
 
-	panel3activeX = -0.93*height;
-	panel3activeSize = 3.275*height;
+	panel3activeX = 0*height;
+	panel3activeY = 0.0168*height;
+	panel3activeSize = 1.356*height;
 
 	// Panel 4 
 	panel4startX = -7.959*height;
@@ -127,11 +128,13 @@ $( document ).ready(function() {
 		$('.panel-3').removeClass('load')
 		$("#inner3").css({
 			'background-position-x': panel3activeX,
+			'background-position-y': panel3activeY,
 			'background-size': panel3activeSize
 		}).delay(2500).queue(function(){
 			$('.panel-3').removeClass('active');
 			$('#inner3').css({
 				'background-position-x': panel3startX,
+				'background-position-y': panel3startY,
 				'background-size': panel3startSize
 			}).dequeue();
 		});
@@ -143,6 +146,7 @@ $( document ).ready(function() {
 		else {
 			$("#inner3").css({
 				'background-position-x': panel3activeX,
+				'background-position-y': panel3activeY,
 				'background-size': panel3activeSize
 			})
 		}
