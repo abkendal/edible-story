@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 html, body {
   height: 100%; }
 
@@ -9,10 +15,11 @@ html, body {
   height: 100vh;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 48%;
   margin-left: -399px;
   margin-top: -300px;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 10px solid black; }
 
 .panel {
   position: absolute;

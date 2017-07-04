@@ -17,47 +17,42 @@ var setWindow = function(){
 var setPanels = function(){
 
 	// Panel 1
-	panel1startX = -2.8767*height;
-	panel1startY = -0.615*height;
-	panel1startSize = 6.667*height;
-
-	panel1activeX = -1.833*height;
-	panel1activeY = -0.263*height;
-	panel1activeSize = 4.833*height;
+	panel1startX = -3.071*height;
+	panel1startY = -0.645*height;
+	panel1startSize = 7.06*height;
 	
 	panel1loadX = -0.1*height;
 	panel1loadY = 0.02*height;
 	panel1loadSize = 1.5*height;
 
 	// Panel 2
-	panel2startX = -0.5317*height;
-	panel2startY = -0.3733*height;
-	panel2startSize = 2.2717*height;
+	panel2startX = -0.6261*height;
+	panel2startY = -0.4628*height;
+	panel2startSize = 2.498*height;
 
 	panel2activeX = 0*height;
 	panel2activeY = 0*height;
 	panel2activeSize = 1.33*height;
 
 	// Panel 3
-	panel3startX = -1.6367*height;
-	panel3startY = -0.745*height;
-	panel3startSize = 3.345*height;
+	panel3startX = -1.796*height;
+	panel3startY = -0.872*height;
+	panel3startSize = 3.678*height;
 
 	panel3activeX = -0.93*height;
 	panel3activeSize = 3.275*height;
 
 	// Panel 4 
-	panel4startX = -6.5951*height;
-	panel4startY = -1.5642*height;
-	panel4startSize = 9.8575*height;
-
-	panel4activeX = -5.4125*height;
-	panel4activeY = -1.5009*height;
-	panel4activeSize = 9.5764*height;
+	panel4startX = -7.954*height;
+	panel4startY = -1.854*height;
+	panel4startSize = 10.742*height;
 
 	panel4loadX = -0.1667*height;
 	panel4loadY = 0*height;
 	panel4loadSize =1.6667*height;
+
+	panel4bg1 = "../img/panel4-2.svg";
+	panel4bg2 = "../img/panel4.svg";
 
 }
 
@@ -89,28 +84,16 @@ $( document ).ready(function() {
 	$(".panel-1").click(function(){
 		if ($(this).hasClass('active')){
 			$("#inner1").css({
-				'background-position-x': panel1activeX,
-				'background-position-y': panel1activeY,
-				'background-size': panel1activeSize
-			}).delay(1500).queue(function(){
-				$('#inner1').css({
-					'background-position-x': panel1startX,
-					'background-position-y': panel1startY,
-					'background-size': panel1startSize
-				}).dequeue();
+				'background-position-x': panel1startX,
+				'background-position-y': panel1startY,
+				'background-size': panel1startSize
 			});
 		}
 		else {
 			$("#inner1").css({
-				'background-position-x': panel1activeX,
-				'background-position-y': panel1activeY,
-				'background-size': panel1activeSize
-			}).delay(2000).queue(function(){
-				$('#inner1').css({
-					'background-position-x': panel1loadX,
-					'background-position-y': panel1loadY,
-					'background-size': panel1loadSize
-				}).dequeue();
+				'background-position-x': panel1loadX,
+				'background-position-y': panel1loadY,
+				'background-size': panel1loadSize
 			});
 		}
 	});
@@ -174,28 +157,16 @@ $( document ).ready(function() {
 	$(".panel-4").click(function(){
 		if ($(this).hasClass('active')){
 			$("#inner4").css({
-				'background-position-x': panel4activeX,
-				'background-position-y': panel4activeY,
-				'background-size': panel4activeSize
-			}).delay(1500).queue(function(){
-				$('#inner4').css({
-					'background-position-x': panel4startX,
-					'background-position-y': panel4startY,
-					'background-size': panel4startSize
-				}).dequeue();
+				'background-position-x': panel4startX,
+				'background-position-y': panel4startY,
+				'background-size': panel4startSize
 			});
 		}
 		else {
 			$("#inner4").css({
-				'background-position-x': panel4activeX,
-				'background-position-y': panel4activeY,
-				'background-size': panel4activeSize
-			}).delay(2000).queue(function(){
-				$('#inner4').css({
-					'background-position-x': panel4loadX,
-					'background-position-y': panel4loadY,
-					'background-size': panel4loadSize
-				}).dequeue();
+				'background-position-x': panel4loadX,
+				'background-position-y': panel4loadY,
+				'background-size': panel4loadSize
 			});
 		}
 	});
