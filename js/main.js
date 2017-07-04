@@ -127,6 +127,7 @@ $( document ).ready(function() {
 
 	$('.fa').click(function(){
 		$('.panel-3').removeClass('load')
+		$("#video").css('opacity', '0');
 		$("#video2").css('opacity', '0');
 		$("#inner3").css({
 			'background-position-x': panel3activeX,
@@ -272,6 +273,8 @@ $( document ).ready(function() {
 	$('#sign').click(function(){
 		// Collapse
 		if ($(this).hasClass('active')){
+			$('#video').css('opacity', '1');
+			$('#video2').css('opacity', '0');
 			vid2.currentTime=12;
 			$(this).prop("disabled",true);
 			$("#video2").get(0).play();
