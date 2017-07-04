@@ -66,10 +66,14 @@ html, body {
     border-right: 2px solid #dedddd; }
     .panel-3 .inner .fa {
       display: none; }
-  .panel-3 video {
+  .panel-3 .video {
     opacity: 0;
     transition: all 1.5s ease;
     cursor: pointer; }
+  .panel-3 .video2 {
+    position: absolute;
+    top: 1px;
+    right: -115px; }
   .panel-3 .btn-container {
     width: 100%;
     position: absolute;
@@ -91,7 +95,7 @@ html, body {
     transition: all 1.5s ease;
     background-position-x: -558px;
     background-size: 1965px; }
-  .panel-3.load video {
+  .panel-3.load .video1 {
     opacity: 1;
     background-color: white;
     cursor: default; }

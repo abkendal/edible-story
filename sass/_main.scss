@@ -94,10 +94,15 @@ html,body {
 		}
 
 	}
-	video {
+	.video {
 		opacity: 0;
 		transition: all 1.5s ease;
 		cursor: pointer;
+	}
+	.video2 {
+		position: absolute;
+		top: 1px;
+		right: -115px;
 	}
 	.btn-container {
 		width: 100%;
@@ -133,7 +138,7 @@ html,body {
 		.inner {
 			// background-image: none;
 		}
-		video {
+		.video1 {
 			// transition: background-color 1000ms linear;
 			opacity: 1;
 			background-color: white;

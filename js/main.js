@@ -72,6 +72,7 @@ $(window).resize(function(){
 $( document ).ready(function() {
 
 	var vid = document.getElementById("video");
+	var vid2 = document.getElementById("video2");
 
 
 
@@ -126,6 +127,7 @@ $( document ).ready(function() {
 
 	$('.fa').click(function(){
 		$('.panel-3').removeClass('load')
+		$("#video2").css('opacity', '0');
 		$("#inner3").css({
 			'background-position-x': panel3activeX,
 			'background-position-y': panel3activeY,
@@ -229,34 +231,14 @@ $( document ).ready(function() {
 
 	// Skip first 4 seconds
 	vid.currentTime=4;
+	vid2.currentTime=0;
 
-	// Button function
-	$('#play').click(function () {
-	   if ($("#video").get(0).paused) {
-	       $("#video").get(0).play();
-	       $(this).html("Pause");
-	   } else {
-	       $("#video").get(0).pause();
-	       $(this).html("Play");
-	  }
-	});
 
-	// Play/Pause
-	$('#video').on('ended',function(){
-		vid.currentTime=4;
-		$("#video").get(0).pause();
-	    $("#play").html("Play");
-	   });
 
-	// Return to beginning
-	$("#beginning").click(function(){
-		vid.currentTime=4;
-		$("#video").get(0).pause();
-	})
+	
 
 	// Expand/Collapse
 	$('#expand').click(function(){
-
 		// Collapse
 		if ($(this).hasClass('active')){
 			vid.currentTime=10;
@@ -267,13 +249,13 @@ $( document ).ready(function() {
 
 			setTimeout(function(){ 
 				$("#video").get(0).pause();
-				$("#play").html("Play");
 				$("#expand").prop("disabled",false);
 			 }, 1000);
 		}
-
 		// Expand
 		else {
+			$('#video').css('opacity', '1');
+			$('#video2').css('opacity', '0');
 			vid.currentTime=5;
 			$("#video").get(0).play();
 			$(this).prop("disabled",true);
@@ -281,12 +263,67 @@ $( document ).ready(function() {
 
 			setTimeout(function(){ 
 				$("#video").get(0).pause();
-				$("#play").html("Play");
 				$("#expand").prop("disabled",false);
 			 }, 1500);
 		}
-		
 	});
+
+	// Expand/Collapse
+	$('#sign').click(function(){
+		// Collapse
+		if ($(this).hasClass('active')){
+			vid2.currentTime=12;
+			$(this).prop("disabled",true);
+			$("#video2").get(0).play();
+
+			$(this).removeClass('active');
+
+			setTimeout(function(){ 
+				$("#video2").get(0).pause();
+				$("#sign").prop("disabled",false);
+			 }, 1000);
+		}
+		// Expand
+		else {
+			$('#video').css('opacity', '0');
+			$('#video2').css('opacity', '1');
+			vid2.currentTime=0;
+			$("#video2").get(0).play();
+			$(this).prop("disabled",true);
+			$(this).addClass('active');
+
+			setTimeout(function(){ 
+				$("#video2").get(0).pause();
+				$("#sign").prop("disabled",false);
+			 }, 12000);
+		}
+	});
+
+
+	// OLD CONTROLS 
+	// // Button function
+	$('#play').click(function () {
+	   if ($("#video").get(0).paused) {
+	       $("#video").get(0).play();
+	       $(this).html("Pause");
+	   } else {
+	       $("#video").get(0).pause();
+	       $(this).html("Play");
+	  }
+	});
+
+	// // Play/Pause
+	// $('#video').on('ended',function(){
+	// 	vid.currentTime=4;
+	// 	$("#video").get(0).pause();
+	//     $("#play").html("Play");
+	//    });
+
+	// // Return to beginning
+	// $("#beginning").click(function(){
+	// 	vid.currentTime=4;
+	// 	$("#video").get(0).pause();
+	// })
 });
 
 
