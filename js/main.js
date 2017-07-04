@@ -130,7 +130,7 @@ $( document ).ready(function() {
 			'background-position-x': panel3activeX,
 			'background-position-y': panel3activeY,
 			'background-size': panel3activeSize
-		}).delay(2500).queue(function(){
+		}).delay(750).queue(function(){
 			$('.panel-3').removeClass('active');
 			$('#inner3').css({
 				'background-position-x': panel3startX,
