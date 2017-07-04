@@ -119,3 +119,6 @@ html, body {
   left: 75%; }
   .panel-4 .inner {
     background-image: url(../img/panel4-2.jpg); }
+
+#preload-01 {
+  background: url(../img/panel4.jpg) no-repeat -9999px -9999px; }
