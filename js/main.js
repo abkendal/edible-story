@@ -35,7 +35,7 @@ var setPanels = function(){
 	panel2activeSize = 1.33*height;
 
 	// Panel 3
-	panel3startX = -1.796*height;
+	panel3startX = -1.801*height;
 	panel3startY = -0.872*height;
 	panel3startSize = 3.678*height;
 
@@ -43,16 +43,16 @@ var setPanels = function(){
 	panel3activeSize = 3.275*height;
 
 	// Panel 4 
-	panel4startX = -7.954*height;
-	panel4startY = -1.854*height;
+	panel4startX = -7.959*height;
+	panel4startY = -1.8557*height;
 	panel4startSize = 10.742*height;
 
 	panel4loadX = -0.1667*height;
 	panel4loadY = 0*height;
 	panel4loadSize =1.6667*height;
 
-	panel4bg1 = "../img/panel4-2.svg";
-	panel4bg2 = "../img/panel4.svg";
+	panel4bg1 = "'url(../img/panel4-2.jpg)'";
+	panel4bg2 = "'url(../img/panel4.jpg')'";
 
 }
 
@@ -159,7 +159,8 @@ $( document ).ready(function() {
 			$("#inner4").css({
 				'background-position-x': panel4startX,
 				'background-position-y': panel4startY,
-				'background-size': panel4startSize
+				'background-size': panel4startSize,
+				'background-image': "url('img/panel4-2.jpg')"
 			});
 		}
 		else {
@@ -167,6 +168,10 @@ $( document ).ready(function() {
 				'background-position-x': panel4loadX,
 				'background-position-y': panel4loadY,
 				'background-size': panel4loadSize
+			}).delay(2000).queue(function(){
+				$('#inner4').css({
+					'background-image': "url('img/panel4.jpg')"
+				}).dequeue();
 			});
 		}
 	});
