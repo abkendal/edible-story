@@ -12,6 +12,7 @@ var setWindow = function(){
 		'width': width,
 		'height': height
 	})
+	console.log(video);
 }
 
 var setPanels = function(){
@@ -44,9 +45,9 @@ var setPanels = function(){
 	panel3activeSize = 1.356*height;
 
 	// Panel 4 
-	panel4startX = -7.959*height;
-	panel4startY = -1.8557*height;
-	panel4startSize = 10.742*height;
+	panel4startX = -7.33*height;
+	panel4startY = -1.535*height;
+	panel4startSize = 9.74*height;
 
 	panel4loadX = -0.1667*height;
 	panel4loadY = 0*height;
@@ -151,7 +152,10 @@ $( document ).ready(function() {
 				'background-position-x': panel3activeX,
 				'background-position-y': panel3activeY,
 				'background-size': panel3activeSize
-			})
+			});
+			setTimeout(function(){ 
+				$('#expand').click();
+			 }, 2000);
 		}
 	});
 
@@ -275,7 +279,7 @@ $( document ).ready(function() {
 		if ($(this).hasClass('active')){
 			$('#video').css('opacity', '1');
 			$('#video2').css('opacity', '0');
-			vid2.currentTime=12;
+			vid2.currentTime=6;
 			$(this).prop("disabled",true);
 			$("#video2").get(0).play();
 
@@ -290,7 +294,7 @@ $( document ).ready(function() {
 		else {
 			$('#video').css('opacity', '0');
 			$('#video2').css('opacity', '1');
-			vid2.currentTime=0;
+			vid2.currentTime=1;
 			$("#video2").get(0).play();
 			$(this).prop("disabled",true);
 			$(this).addClass('active');
@@ -298,7 +302,7 @@ $( document ).ready(function() {
 			setTimeout(function(){ 
 				$("#video2").get(0).pause();
 				$("#sign").prop("disabled",false);
-			 }, 12000);
+			 }, 6000);
 		}
 	});
 

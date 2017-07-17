@@ -19,7 +19,7 @@ html, body {
   margin-left: -399px;
   margin-top: -300px;
   overflow: hidden;
-  border: 10px solid black; }
+  border: 5px solid #acacac; }
 
 .panel {
   position: absolute;
@@ -49,7 +49,7 @@ html, body {
   left: 0; }
   .panel-1 .inner {
     background-image: url(../img/panel-1.svg);
-    border-right: 2px solid #dedddd; }
+    border-right: 2px solid #acacac; }
   .panel-1.active.load .inner {
     transition: all 2.5s ease; }
 
@@ -57,13 +57,13 @@ html, body {
   left: 25%; }
   .panel-2 .inner {
     background-image: url(../img/panel2.jpg);
-    border-right: 2px solid #dedddd; }
+    border-right: 2px solid #acacac; }
 
 .panel-3 {
   left: 50%; }
   .panel-3 .inner {
     background-image: url(../img/panel3.jpg);
-    border-right: 2px solid #dedddd; }
+    border-right: 2px solid #acacac; }
     .panel-3 .inner .fa {
       display: none; }
   .panel-3 .video {
