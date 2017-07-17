@@ -14,8 +14,6 @@ html,body {
 .table {
 
 	margin: auto;
-	// width: $width;
-	// height: $height;
 	height: 99vh;
 	position: absolute;
     left: 50%;
@@ -24,11 +22,11 @@ html,body {
     margin-top: -300px;
     overflow: hidden;
     border: 5px solid #acacac;
-    
+
 }
 .panel {
 	position: absolute;
-	width: 25%;
+	width: 20%;
   	display: inline-block;
   	// height: $height;
 	overflow: hidden;
@@ -75,7 +73,7 @@ html,body {
 	}
 }
 .panel-2{	
-	left: 25%;
+	left: 20%;
 	.inner {
 	  	background-image: url(../img/panel2.jpg);
 	  	border-right: 2px solid #acacac;
@@ -86,7 +84,7 @@ html,body {
 	}
 }
 .panel-3{
-	left: 50%;
+	left: 40%;
 	.inner {
 		background-image: url(../img/panel3.jpg);
 		border-right: 2px solid #acacac;
@@ -168,8 +166,91 @@ html,body {
 		}
 	}
 }
+.panel-3-2{
+	left: 60%;
+	.inner {
+		background-image: url(../img/panel3-2.jpg);
+		border-right: 2px solid #acacac;
+		.fa {
+			display: none;
+		}
+
+	}
+	.video {
+		opacity: 0;
+		transition: all 1.5s ease;
+		cursor: pointer;
+	}
+	.video2 {
+		position: absolute;
+		top: 4.5%;
+		right: -14.8%;
+	}
+	.btn-container {
+		width: 100%;
+		position: absolute;
+		bottom: 30px;
+		display: none;
+		text-align: right;
+		right: 15px;
+	}
+	.btn-group {
+		width: 400px;
+		margin: auto;
+	}
+	.btn-inner {
+		display: inline-block;
+		// width: 33%;
+		text-align: center;
+	}
+	.btn {
+		    border-radius: 100%;
+		    height: 30px;
+		    width: 30px;
+	}
+	&.active {
+		.inner {
+			// background: white;
+			transition: all 1.5s ease;
+			background-position-x: -558px;
+			background-size: 1965px;
+		}
+	}
+	&.load {
+		.inner {
+			// background-image: none;
+		}
+		.video2 {
+			// transition: background-color 1000ms linear;
+			opacity: 1;
+			background-color: white;
+			cursor: default;
+		}
+		.fa {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 26px;
+			cursor: pointer;
+			z-index: 100;
+			padding: 15px;
+			color: rgba(0, 0, 0, 0.14);
+			&:hover {
+				color: black;
+			}
+		}
+		&:hover {
+			.fa {
+				display: inline;
+			}
+			.btn-container {
+				display: block;
+			}
+		}
+	}
+}
 .panel-4{
-	left: 75%;
+	left: 80%;
 	.inner {
 		// background-position-x: -4335px;
 		// background-position-y: -975px;

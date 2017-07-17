@@ -1,6 +1,6 @@
 var setWindow = function(){
 	height = $('.table').height();
-	width = height * 1.33;
+	width = height * 1.4;
 	$('.table').css({
 		'width': width,
 		'margin-left': -width/2,
@@ -12,14 +12,14 @@ var setWindow = function(){
 		'width': width,
 		'height': height
 	})
-	console.log(video);
 }
 
 var setPanels = function(){
 
+	console.log(height);
 	// Panel 1
-	panel1startX = -3.071*height;
-	panel1startY = -0.645*height;
+	panel1startX = -3.004*height;
+	panel1startY = -0.685*height;
 	panel1startSize = 7.06*height;
 	
 	panel1loadX = -0.1*height;
@@ -27,7 +27,7 @@ var setPanels = function(){
 	panel1loadSize = 1.5*height;
 
 	// Panel 2
-	panel2startX = -0.6261*height;
+	panel2startX = -0.4597*height;
 	panel2startY = -0.4628*height;
 	panel2startSize = 2.498*height;
 
@@ -36,16 +36,25 @@ var setPanels = function(){
 	panel2activeSize = 1.33*height;
 
 	// Panel 3
-	panel3startX = -1.801*height;
+	panel3startX = -1.59*height;
 	panel3startY = -0.872*height;
 	panel3startSize = 3.678*height;
 
 	panel3activeX = 0*height;
-	panel3activeY = 0.0168*height;
-	panel3activeSize = 1.356*height;
+	panel3activeY = -0.008647*height;
+	panel3activeSize = 1.427*height;
+
+	// Panel 3-2
+	panel3_2startX = -2.336*height;
+	panel3_2startY = -0.707*height;
+	panel3_2startSize = 4.616*height;
+
+	panel3_2activeX = -0.1753*height;
+	panel3_2activeY = 0.0492*height;
+	panel3_2activeSize = 1.799*height;
 
 	// Panel 4 
-	panel4startX = -7.33*height;
+	panel4startX = -7.341*height;
 	panel4startY = -1.535*height;
 	panel4startSize = 9.74*height;
 
@@ -126,10 +135,10 @@ $( document ).ready(function() {
 
 	$("#inner3").css('background-size', panel3startSize).css('background-position-x', panel3startX).css('background-position-y', panel3startY);
 
-	$('.fa').click(function(){
+	$('#panel3-close').click(function(){
 		$('.panel-3').removeClass('load')
 		$("#video").css('opacity', '0');
-		$("#video2").css('opacity', '0');
+		$('#expand').removeClass('active');
 		$("#inner3").css({
 			'background-position-x': panel3activeX,
 			'background-position-y': panel3activeY,
@@ -155,6 +164,41 @@ $( document ).ready(function() {
 			});
 			setTimeout(function(){ 
 				$('#expand').click();
+			 }, 2000);
+		}
+	});
+
+	$("#inner3-2").css('background-size', panel3_2startSize).css('background-position-x', panel3_2startX).css('background-position-y', panel3_2startY);
+
+	$('.panel-3-2 .fa').click(function(){
+		$('.panel-3-2').removeClass('load')
+		$("#video2").css('opacity', '0');
+		$('#sign').removeClass('active');
+		$("#inner3-2").css({
+			'background-position-x': panel3_2activeX,
+			'background-position-y': panel3_2activeY,
+			'background-size': panel3_2activeSize
+		}).delay(750).queue(function(){
+			$('.panel-3-2').removeClass('active');
+			$('#inner3-2').css({
+				'background-position-x': panel3_2startX,
+				'background-position-y': panel3_2startY,
+				'background-size': panel3_2startSize
+			}).dequeue();
+		});
+	});
+
+	$(".panel-3-2").click(function(){
+		if ($(this).hasClass('active')){
+		}
+		else {
+			$("#inner3-2").css({
+				'background-position-x': panel3_2activeX,
+				'background-position-y': panel3_2activeY,
+				'background-size': panel3_2activeSize
+			});
+			setTimeout(function(){ 
+				$('#sign').click();
 			 }, 2000);
 		}
 	});
@@ -209,6 +253,18 @@ $( document ).ready(function() {
 
 			// Panel 3 animations
 			else if($(this).hasClass('panel-3')){
+				if ($(this).hasClass('active')){
+				}
+				else {
+					$(this).addClass('active').delay(1500).queue(function(){
+					    $(this).addClass('load').dequeue();
+					    // vid.play();
+					});
+				}
+			}
+
+			// Panel 3-2 animations
+			else if($(this).hasClass('panel-3-2')){
 				if ($(this).hasClass('active')){
 				}
 				else {
@@ -277,60 +333,24 @@ $( document ).ready(function() {
 	$('#sign').click(function(){
 		// Collapse
 		if ($(this).hasClass('active')){
-			$('#video').css('opacity', '1');
 			$('#video2').css('opacity', '0');
-			vid2.currentTime=6;
-			$(this).prop("disabled",true);
-			$("#video2").get(0).play();
-
 			$(this).removeClass('active');
-
-			setTimeout(function(){ 
-				$("#video2").get(0).pause();
-				$("#sign").prop("disabled",false);
-			 }, 1000);
 		}
 		// Expand
 		else {
-			$('#video').css('opacity', '0');
 			$('#video2').css('opacity', '1');
-			vid2.currentTime=1;
+			vid2.currentTime=0;
 			$("#video2").get(0).play();
 			$(this).prop("disabled",true);
 			$(this).addClass('active');
 
+
 			setTimeout(function(){ 
 				$("#video2").get(0).pause();
 				$("#sign").prop("disabled",false);
-			 }, 6000);
+			 }, 5500);
 		}
 	});
-
-
-	// OLD CONTROLS 
-	// // Button function
-	$('#play').click(function () {
-	   if ($("#video").get(0).paused) {
-	       $("#video").get(0).play();
-	       $(this).html("Pause");
-	   } else {
-	       $("#video").get(0).pause();
-	       $(this).html("Play");
-	  }
-	});
-
-	// // Play/Pause
-	// $('#video').on('ended',function(){
-	// 	vid.currentTime=4;
-	// 	$("#video").get(0).pause();
-	//     $("#play").html("Play");
-	//    });
-
-	// // Return to beginning
-	// $("#beginning").click(function(){
-	// 	vid.currentTime=4;
-	// 	$("#video").get(0).pause();
-	// })
 });
 
 

@@ -23,7 +23,7 @@ html, body {
 
 .panel {
   position: absolute;
-  width: 25%;
+  width: 20%;
   display: inline-block;
   overflow: hidden;
   border: 0;
@@ -54,13 +54,13 @@ html, body {
     transition: all 2.5s ease; }
 
 .panel-2 {
-  left: 25%; }
+  left: 20%; }
   .panel-2 .inner {
     background-image: url(../img/panel2.jpg);
     border-right: 2px solid #acacac; }
 
 .panel-3 {
-  left: 50%; }
+  left: 40%; }
   .panel-3 .inner {
     background-image: url(../img/panel3.jpg);
     border-right: 2px solid #acacac; }
@@ -115,8 +115,64 @@ html, body {
   .panel-3.load:hover .btn-container {
     display: block; }
 
+.panel-3-2 {
+  left: 60%; }
+  .panel-3-2 .inner {
+    background-image: url(../img/panel3-2.jpg);
+    border-right: 2px solid #acacac; }
+    .panel-3-2 .inner .fa {
+      display: none; }
+  .panel-3-2 .video {
+    opacity: 0;
+    transition: all 1.5s ease;
+    cursor: pointer; }
+  .panel-3-2 .video2 {
+    position: absolute;
+    top: 4.5%;
+    right: -14.8%; }
+  .panel-3-2 .btn-container {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    display: none;
+    text-align: right;
+    right: 15px; }
+  .panel-3-2 .btn-group {
+    width: 400px;
+    margin: auto; }
+  .panel-3-2 .btn-inner {
+    display: inline-block;
+    text-align: center; }
+  .panel-3-2 .btn {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px; }
+  .panel-3-2.active .inner {
+    transition: all 1.5s ease;
+    background-position-x: -558px;
+    background-size: 1965px; }
+  .panel-3-2.load .video2 {
+    opacity: 1;
+    background-color: white;
+    cursor: default; }
+  .panel-3-2.load .fa {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 100;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.14); }
+    .panel-3-2.load .fa:hover {
+      color: black; }
+  .panel-3-2.load:hover .fa {
+    display: inline; }
+  .panel-3-2.load:hover .btn-container {
+    display: block; }
+
 .panel-4 {
-  left: 75%; }
+  left: 80%; }
   .panel-4 .inner {
     background-image: url(../img/panel4-2.jpg); }
 
