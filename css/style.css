@@ -43,7 +43,8 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: white;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  will-change: transition, background-size, background-position-y, background-position-x; }
 
 .panel-1 {
   left: 0; }
